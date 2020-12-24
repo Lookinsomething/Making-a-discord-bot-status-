@@ -1,16 +1,26 @@
 const Discord = require('discord.js');
-
 const client = new Discord.Client();
 
 client.once("ready", () => {
-    console.log('ready!!!')
+    console.log(`Logged in as ${client.user.tag}!`);
 
-    client.user.setActivity("Tutorial bot!", { type: "STREAMING", url: "https://www.twitch.tv/lookinsomething" }) // YOU CAN PUT ANY TWITCH STREAMING LINK IN THIS AREA
+    client.user.setActivity("Your message here!", {
+        type: "PLAYING", //This can contain PLAYING, WATCHING, LISTENING, STREAMING
+    });
 })
 
-client.login("NzY3Mjg1MDgyNjc4NjI0Mjc2.X4vr6w.Go2_FHJFUtvM4u9GpLldAZ_niR8") // Put your token here
+client.login("token")
 
-// REMEMBER TO CLICK Ctrl + S to save it or else it won't work!!!
-// MY TOKEN WILL BE RESET WHENEVER I POSTED OUT A VIDEO ABOUT TUTORIAL!
 
-// REMEMBER TO CLICK CTRL + S TO SAVE THE WORK YOU'VE DONE!
+// Remember to save the file!
+
+// The following code does not currently work anymore...
+/*
+client.user.setPresence({
+    status: "online",  // You can show online, idle... Do not disturb is dnd
+    game: {
+        name: "!help",  // The message shown
+        type: "PLAYING" // PLAYING, WATCHING, LISTENING, STREAMING,
+    }
+});
+*/
